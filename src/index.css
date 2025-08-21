@@ -1,0 +1,382 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.light-mode {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.dark-mode {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* Header/Navbar */
+.header {
+  background: linear-gradient(to right, #e7eae8, #006400);
+  padding: 1rem clamp(1rem, 5vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure positioning context */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 100px; /* Reduced from 200px */
+  position: absolute; /* Maintain top-left position */
+  top: 0;
+  left: 0;
+  padding: 1rem; /* Add some padding for better visibility */
+}
+
+.logo-text {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.rolling-logo {
+  animation: roll 2s infinite linear;
+  transform-origin: center;
+}
+
+@keyframes roll {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.theme-toggle {
+  /* background-color: #ffffff; */
+  color: #006400;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+
+}
+
+.theme-toggle:hover {
+  background-color: #006400;
+  color: #1f2937;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 100, 0, 0.85), rgba(0, 133, 63, 0.85)), 
+              url('/nigerian-doctor.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: clamp(3rem, 10vw, 5rem) clamp(1rem, 5vw, 2rem);
+  text-align: center;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3.5vw, 1.525rem);
+  color: #E6F4EA;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-subtitle_ensure {
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  color: #d1d5db;
+  margin-top: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+/* Query Input */
+.query-container {
+  padding: clamp(1rem, 4vw, 1.5rem);
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: min(90%, 48rem);
+  margin: 2rem auto;
+}
+
+.dark-mode .query-container {
+  background-color: #2d3748;
+}
+
+.query-label {
+  display: block;
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.dark-mode .query-label {
+  color: #e2e8f0;
+}
+
+.query-input {
+  width: 100%;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  resize: vertical;
+  background-color: #f3f4f6;
+  color: #333333;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.dark-mode .query-input {
+  border-color: #4a5568;
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.query-input:focus {
+  outline: none;
+  border-color: #009933;
+  box-shadow: 0 0 0 2px rgba(0, 153, 51, 0.2);
+}
+
+.query-button {
+  margin-top: 0.75rem;
+  background-color: #006600;
+  color: #ffffff;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  border: none;
+  border-radius: 0.25rem;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.query-button:hover {
+  background-color: #008000;
+}
+
+.dark-mode .query-button {
+  background-color: #006600;
+}
+
+.dark-mode .query-button:hover {
+  background-color: #e2e8f0;
+  color: #006600;
+}
+
+.query-button:active {
+  animation: pulse 1.5s infinite;
+}
+
+/* Results Display */
+.results-container {
+  background-image: url('/coat-of-arms.png');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  padding: clamp(1rem, 4vw, 1.5rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: min(90%, 47rem);
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.dark-mode .results-container {
+  background-color: #374151;
+}
+
+.results-question {
+  flex: 0 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 1rem;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.results-content {
+  flex: 1 1 auto;
+}
+
+.results-title {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #006600;
+}
+
+.results-text {
+  color: #4b5563;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.dark-mode .results-text {
+  color: #d1d5db;
+}
+
+.results-timestamp {
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  color: #008000;
+  margin-top: 0.5rem;
+}
+
+.results-question strong,
+.results-text strong {
+  color: #008000;
+}
+
+.results-placeholder {
+  color: #9ca3af;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.dark-mode .results-placeholder {
+  color: #9ca3af;
+}
+
+/* Facility Map */
+.map-container {
+  height: clamp(12rem, 40vw, 16rem);
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .map-container {
+  background-color: transparent;
+}
+
+.map-container + * {
+  position: relative;
+  z-index: 1;
+}
+
+.parent-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 clamp(1rem, 5vw, 2rem);
+}
+
+/* Footer */
+.footer {
+  background-color: #006600;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer a svg {
+  color: white;
+  vertical-align: middle;
+}
+
+.dark-mode .footer a {
+  color: white;
+}
+
+.dark-mode .footer a:hover {
+  color: #d3d3d3;
+}
+
+/* Media Queries for Fine-Tuning */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    position: absolute; /* Maintain top-left position */
+    top: 0;
+    left: 0;
+    padding: 1rem;
+  }
+
+  .logo-text {
+    text-align: center;
+  }
+
+  /* .theme-toggle {
+    width: 100%;
+    max-width: 12rem;
+  } */
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .results-container {
+    flex-direction: column;
+  }
+
+  .results-question {
+    margin-bottom: 1rem;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .query-container,
+  .results-container {
+    margin: 1rem;
+  }
+
+  .query-button {
+    padding: 0.5rem;
+  }
+
+  .results-question {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .logo {
+    position: absolute; /* Ensure top-left position on smaller screens */
+    top: 0;
+    left: 0;
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+    font-size: 75px; /* Further reduced size for phone mode */
+  }
+}
