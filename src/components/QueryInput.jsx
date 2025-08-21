@@ -5,32 +5,32 @@ function QueryInput({ isDarkMode, onQuery }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleQuerySubmit = async () => {
-    if (!query.trim()) return;
+  // const handleQuerySubmit = async () => {
+  //   if (!query.trim()) return;
 
-    setLoading(true);
-    setError(null);
+  //   setLoading(true);
+  //   setError(null);
 
-    try {
-      const res = await fetch("http://127.0.0.1:8000/search", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
+  //   try {
+  //     const res = await fetch("http://127.0.0.1:8000/search", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ query }),
+  //     });
 
-      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+  //     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
 
-      const data = await res.json();
-      onQuery({ question: query, answer: data.answer });
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-      setQuery("");
-    }
-  };
+  //     const data = await res.json();
+  //     onQuery({ question: query, answer: data.answer });
+  //   } catch (err) {
+  //     setError(err.message);
+  //   } finally {
+  //     setLoading(false);
+  //     setQuery("");
+  //   }
+  // };
 
   const containerClass = `query-container ${isDarkMode ? 'dark-mode' : ''}`;
 
