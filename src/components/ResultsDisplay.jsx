@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../ResultsDisplay.css';
 
 function ResultsDisplay({ results: propResults, isDarkMode }) {
   const [results, setResults] = useState(() => propResults || []);
@@ -23,7 +24,7 @@ function ResultsDisplay({ results: propResults, isDarkMode }) {
   const containerClass = `results-container ${isDarkMode ? 'dark-mode' : ''}`;
 
   return (
-    <div className={containerClass}style={{marginTop: '-180px',position:'absolute', left:'28%'}}>
+    <div className={containerClass}>
       {results.length > 0 ? (
         <div className="results-list">
           {results.map((item, index) => (

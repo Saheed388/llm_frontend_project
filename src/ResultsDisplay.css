@@ -1,0 +1,135 @@
+.results-container {
+  max-width: 70%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #F5F5F5; /* white background */
+  border-radius: 10px;
+  /* /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);  */
+  box-sizing: border-box;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.result-item {
+  padding: 1rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #F5F5F5;
+}
+
+.results-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+  background-color: #7a7a7a;
+  padding: 0.4rem 0.75rem;
+  border-radius: 25px;
+  display: inline-block;
+}
+
+.results-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.25rem 0 0.5rem 0;
+  color: #333;
+}
+
+.results-text strong {
+  color: #228B22; /* green for 'Answer:' */
+}
+
+.results-timestamp {
+  font-size: 0.85rem;
+  color: #228B22;
+  margin-top: 0.5rem;
+  display: block;
+  font-style: italic;
+}
+
+.result-divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1rem 0;
+}
+
+.results-placeholder {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #ececec;
+  border-radius: 6px;
+}
+
+/* Dark Mode */
+.dark-mode .results-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+.dark-mode .result-item {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+.dark-mode .results-question {
+  background-color: #444;
+  color: #00cc00;
+}
+
+.dark-mode .results-text {
+  color: #ddd;
+}
+
+.dark-mode .results-timestamp {
+  color: #aaa;
+}
+
+.dark-mode .results-placeholder {
+  background-color: #444;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .results-container {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .results-question {
+    font-size: 0.95rem;
+  }
+
+  .results-text {
+    font-size: 0.9rem;
+  }
+
+  .results-timestamp {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .results-container {
+    padding: 0.75rem;
+  }
+
+  .results-question {
+    font-size: 0.9rem;
+  }
+
+  .results-text {
+    font-size: 0.85rem;
+  }
+
+  .results-timestamp {
+    font-size: 0.75rem;
+  }
+}
