@@ -1,77 +1,67 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Logo from './Logo';
+
 
 function Hero({ isDarkMode }) {
-  const sentence = "Ensure the hospital you choose is properly licensed.";
-  const words = sentence.split(" ");
-
-  const [cycle, setCycle] = useState(0); // trigger rerender for looping
-
-  // restart animation every 15s (sentence duration + delay)
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCycle((prev) => prev + 1);
-    }, 15000); // cycle time for slower wave animation
-
-    return () => clearInterval(interval);
+    console.log("Hero component mounted");
   }, []);
 
-  const wordAnim = {
-    hidden: { 
-      opacity: 0, 
-      y: 50, 
-      rotate: -10, // slight tilt for wave effect
-      scale: 0.8 // slightly smaller for wave-like pop
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      rotate: 0, // return to normal orientation
-      scale: 1, // return to normal size
-      transition: { 
-        duration: 0.2, // smooth duration for wave motion
-        ease: "easeInOut", // smooth in-out for wave-like flow
-        type: "spring", // springy feel for wave bounce
-        stiffness: 150, // moderate spring stiffness
-        damping: 150 // moderate damping for smooth wave
-      } 
-    }
-  };
+  const chats = [
+    "- How large is Mamagi Primary Health Clinic in terms of staff and beds?",
+    "- Does Accolade Medical Clinic have laboratory scientists or technicians?",
+    "- What services are provided at Defense Headquarters Medical Centre Abuja?",
+    "- Does Lafiak Hospital Abaji have a dentist or dental technician?",
+    "- What is the summary of Agyana Health Clinic in Pandagi Agyana, Abaji, Fct?",
+  ];
 
   return (
-    <div 
-      className="hero" 
-      style={{ 
-        background: `linear-gradient(rgba(0, 153, 51, 0.7), rgba(111, 163, 128, 0.7)), url('/public/nigerian-doctor.jpg')`, 
-        backgroundSize: "cover", 
-        boxShadow: "0 4px 8px rgba(14, 195, 38, 0.2)",
-        marginTop: '10px' 
+    <div
+      className="hero"
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "250px",
+        height: "100vh",
+        backgroundColor: "#1A1A1A",
+        padding: "20px 10px",
+        boxShadow: "5px 0 5px rgba(57, 171, 120, 0.5)",
+        color: "#F5F5F5",
+        overflowY: "auto",
+        zIndex: 1000, // Ensure it stays on top
       }}
     >
-      <h1 className="hero-title">Empowering Nigerian Healthcare</h1>
-      <h2 className="hero-subtitle">Explore health registry data with AI-driven insights</h2>
-      <h5 className="hero-subtitle">Helping you make informed decisions on the right healthcare facility based on reliable information.</h5>
-
-
-      <motion.p 
-        key={cycle} // re-mounts each loop
-        className="hero-subtitle_ensure"
-        initial="hidden"
-        animate="visible"
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        {words.map((word, i) => (
-          <motion.span
-            key={i}
-            variants={wordAnim}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: i === 0 ? 0 : i * 4.5 + 4.5 }} // "Ensure" immediate, others 1.5s delay each
-            style={{ display: "inline-block", marginRight: "6px", fontWeight: "bold"  }}
+        
+        
+        <Logo />
+
+       
+        <div style={{ marginBottom: "30px" }}>
+          <p style={{fontSize: '20px', marginTop: "50px"}}>Empowering Nigerian Healthcare by exploring health registry data with AI-driven insights to help you make informed decisions on the right healthcare facility based on reliable information.</p>
+        </div>
+        
+        <h3 style={{ margin: "20px 0 10px 0", fontSize: "16px", color: "#FFD700" }}>Frequently Ask Question</h3>
+        {chats.map((chat, index) => (
+          <div
+            key={index}
+            style={{
+              padding: "5px 0",
+              fontSize: "14px",
+              color: index === chats.length - 1 ? "#F5F5F5" : "#F5F5F5",
+            }}
           >
-            {word}
-          </motion.span>
+            {chat}
+          </div>
         ))}
-      </motion.p>
+       
+      </motion.div>
     </div>
   );
 }

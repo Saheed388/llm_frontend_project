@@ -13,7 +13,6 @@ function App() {
   const [facilities, setFacilities] = useState([]);
 
   const handleQuery = (data) => {
-    // Add timestamp to the query data
     const timestamp = new Date().toLocaleString('en-US', {
       year: 'numeric',
       month: 'short',
@@ -22,9 +21,7 @@ function App() {
       minute: '2-digit',
       timeZone: 'Africa/Lagos',
     });
-    // Prepend new query to history (add to start of array)
     setQueryHistory((prevHistory) => [{ ...data, timestamp }, ...prevHistory]);
-    // Update facilities if the response includes them
     if (data?.facilities && Array.isArray(data.facilities)) {
       setFacilities(data.facilities);
     } else {
@@ -37,15 +34,12 @@ function App() {
   };
 
   return (
-    <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    <div className={isDarkMode ? 'dark-mode' : 'light-mode'} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Hero isDarkMode={isDarkMode} />
-      <main className="container">
-        <QueryInput onQuery={handleQuery} isDarkMode={isDarkMode} />
+      <QueryInput onQuery={handleQuery} isDarkMode={isDarkMode} />
+      <main className="container" style={{ flex: 1, marginLeft: '260px', marginTop: '120px', padding: '20px' }}>
         <ResultsDisplay results={queryHistory} isDarkMode={isDarkMode} />
-        {facilities.length > 0 && (
-          <FacilityMap isDarkMode={isDarkMode} facilities={facilities} />
-        )}
+        
       </main>
       <Footer isDarkMode={isDarkMode} />
     </div>

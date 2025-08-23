@@ -13,7 +13,7 @@ function Logo() {
           </linearGradient>
         </defs>
       </svg>
-      <span className="logo-text"></span>
+      <span className="logo-text"> MediQuest NG</span>
     </div>
   );
 }
