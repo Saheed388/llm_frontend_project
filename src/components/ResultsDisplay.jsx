@@ -30,7 +30,7 @@ function ResultsDisplay({ results: propResults, isDarkMode }) {
           {results.map((item, index) => (
             <div key={index} className="result-item">
               <p className="results-question">{item.question}</p>
-              <p className="results-text"><strong>Answer:</strong> {item.answer}</p>
+              <p className="results-text"><strong></strong> {item.answer}</p>
               <p className="results-timestamp">Posted: {item.timestamp}</p>
               <hr className="result-divider" />
             </div>
