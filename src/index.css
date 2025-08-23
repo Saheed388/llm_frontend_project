@@ -377,8 +377,8 @@ body {
 
   .results-question {
     padding: 0.25rem 0.5rem;
-    position: absolute;
-    right: 50%;
+    /* position: absolute;
+    right: 50%; */
   }
 
   .logo {

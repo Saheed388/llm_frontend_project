@@ -44,7 +44,7 @@ function Hero({ isDarkMode }) {
 
        
         <div style={{ marginBottom: "30px" }}>
-          <p style={{fontSize: '20px', marginTop: "50px"}}>Empowering Nigerian Healthcare by exploring health registry data with AI-driven insights to help you make informed decisions on the right healthcare facility based on reliable information.</p>
+          <p style={{fontSize: '20px', marginTop: "50px"}}>Empowering Nigerian Healthcare by exploring health registry data with AI-driven insights to help you make informed decisions on the right healthcare facility based on reliable information from health.gov.ng.</p>
         </div>
         
         <h3 style={{ margin: "20px 0 10px 0", fontSize: "16px", color: "#FFD700" }}>Frequently Ask Question</h3>

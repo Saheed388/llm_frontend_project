@@ -40,8 +40,8 @@ function QueryInput({ isDarkMode, onQuery }) {
         <span style={{ color: '#006400', fontSize: '24px', fontWeight: 'bold' }}></span>
       </div>
       <div style={{ backgroundColor: '#F5F5F5', padding: '15px', borderRadius: '8px', color: '#fff' }}>
-        <div style={{ position: 'relative', marginBottom: '10px' }}>
-          <input
+        <div style={{ position: 'relative' }}>
+          <textarea
             id="query-input"
             className="query-input"
             placeholder="Search hospital details near you in Abj and Lag"
@@ -49,14 +49,18 @@ function QueryInput({ isDarkMode, onQuery }) {
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && !loading && handleQuerySubmit()}
             style={{
-              width: '70%',
+              width: '500px',
+              height: '20px',
               backgroundColor: '#F5F5F5',
               color: '#000',
               border: '2px solid #228B22',
-              borderRadius: '20px',
+              borderRadius: '50px',
               padding: '10px 40px 10px 15px',
               fontSize: '16px',
               outline: 'none',
+              resize: 'vertical', // Allows vertical resizing by user
+              // minHeight: '40px', // Initial height
+              // overflowY: 'auto', // Enables scrolling if content exceeds visible area
             }}
             disabled={loading}
           />
@@ -70,7 +74,6 @@ function QueryInput({ isDarkMode, onQuery }) {
               fontSize: '16px',
             }}
           >
-            
           </span>
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '10px' }}>
@@ -91,7 +94,7 @@ function QueryInput({ isDarkMode, onQuery }) {
             <span role="img" aria-label="mic"></span>
           </button>
         </div>
-        {error && <p style={{ color: '#FF4444', marginTop: '10px' }}>❌ {error}</p>}
+        {error && <p style={{ color: '#FF4444', marginTop: '5px' }}>❌ {error}</p>}
       </div>
     </div>
   );

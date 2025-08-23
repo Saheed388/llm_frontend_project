@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import QueryInput from './components/QueryInput';
 import ResultsDisplay from './components/ResultsDisplay';
-import FacilityMap from './components/FacilityMap';
 import Footer from './components/Footer';
 import './App.css';
 
