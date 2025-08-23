@@ -23,7 +23,7 @@ function ResultsDisplay({ results: propResults, isDarkMode }) {
   const containerClass = `results-container ${isDarkMode ? 'dark-mode' : ''}`;
 
   return (
-    <div className={containerClass}>
+    <div className={containerClass}style={{marginTop: '-180px',position:'absolute', left:'28%'}}>
       {results.length > 0 ? (
         <div className="results-list">
           {results.map((item, index) => (

@@ -68,7 +68,7 @@ function QueryInput({ isDarkMode, onQuery }) {
             style={{
               position: 'absolute',
               right: '10px',
-              top: '50%',
+              // top: '50%',
               transform: 'translateY(-50%)',
               color: '#228B22',
               fontSize: '16px',
