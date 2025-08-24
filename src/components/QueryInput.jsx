@@ -25,7 +25,7 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
           <textarea
             id="query-input"
             className="query-input"
-            placeholder="Search hospital details near you in Abj and Lag"
+            placeholder="Search hospital details near you"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && !loading && handleQuerySubmit()}

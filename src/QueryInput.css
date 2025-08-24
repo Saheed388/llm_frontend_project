@@ -84,3 +84,47 @@
   color: #FF4444;
   margin-top: 5px;
 }
+
+/* 📱 Mobile-friendly QueryInput */
+@media (max-width: 480px) {
+  .query-container {
+    position: relative;   /* remove absolute to allow natural flow */
+    right: auto;
+    margin: 10px auto;
+    width: 250px;
+    padding: 12px;
+    height: 5px;
+  }
+
+  .query-box {
+    position: relative;
+    right: auto;
+    background-color: #F5F5F5;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  .query-input {
+    width: 100%;        /* full width */
+    max-width: 100%;
+    height: auto;
+    min-height: 40px;   /* give more tap space */
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 12px 15px;
+  }
+
+  .query-actions {
+    flex-direction: column;   /* stack buttons under input */
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .query-button {
+    width: 100px;
+    padding: 8px;
+    font-size: 14px;
+  }
+}

@@ -81,3 +81,21 @@ body {
   color: #ffd700;
 }
 
+
+@media (max-width: 768px) {
+  .footer {
+    max-width: 100%; /* Full width on mobile */
+    padding: clamp(0.5rem, 2vw, 0.75rem); /* Reduced padding */
+  }
+
+  .footer-write {
+    transform: translateX(0); /* Ensure no shift */
+    width: 100%; /* Full width on mobile */
+  }
+
+  .footer a {
+    font-size: clamp(0.75rem, 2.5vw, 0.875rem); /* Slightly smaller on mobile */
+    display: block; /* Stack links vertically */
+    margin: 0.25rem 0; /* Add vertical spacing */
+  }
+}
