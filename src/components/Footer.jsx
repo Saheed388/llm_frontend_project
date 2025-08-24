@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaGlobe } from 'react-icons/fa'; // Import icons
 function Footer({ isDarkMode }) {
   return (
     <footer className="footer">
-      <p>
+      <p className="footer-write">
         HealthREG AI | Built By Jimoh Saheed Tunde{' '} | 
         {' '}<a href="https://github.com/Saheed388" target="_blank" rel="noopener noreferrer">
           <FaGithub /> GitHub
@@ -17,6 +17,11 @@ function Footer({ isDarkMode }) {
         <a href="https://saheed.vercel.app/" target="_blank" rel="noopener noreferrer">
           <FaGlobe /> Portfolio
         </a>
+        <br />
+        Copyright &copy; 2025 
+        <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
+          
+        </a>.
       </p>
     </footer>
   );
