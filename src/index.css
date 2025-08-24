@@ -12,6 +12,27 @@ body {
   min-height: 100vh;
 }
 
+/* logo */
+
+.logo {
+  position: relative;
+  top: -10px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* replaces marginRight */
+}
+
+.logo-img {
+  width: 62px;
+  height: 62px;
+}
+
+.logo-text {
+  font-family: 'Macondo', cursive;
+  font-size: 1.5rem; /* optional */
+  color : #ffd700
+}
+
 
 
 /* Footer */
@@ -48,36 +69,3 @@ body {
   color: #d3d3d3;
 }
 
-/* Media Queries for Fine-Tuning */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .logo {
-    position: absolute; /* Maintain top-left position */
-    top: 0;
-    left: 0;
-    padding: 1rem;
-  }
-
-  .logo-text {
-    text-align: center;
-    color: #009933;
-  }
-
-  
-  .hero {
-    padding: 2rem 1rem;
-  }
-
-  .results-container {
-    flex-direction: column;
-  }
-
-  .results-question {
-    margin-bottom: 1rem;
-    margin-right: 0;
-  }
-}

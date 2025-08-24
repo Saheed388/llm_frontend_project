@@ -1,36 +1,16 @@
 import React, { useState } from 'react';
 import '../QueryInput.css';
 
-function QueryInput({ isDarkMode, onQuery }) {
+function QueryInput({ isDarkMode, onQuery, loading }) {
   const [query, setQuery] = useState('');
-  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const handleQuerySubmit = async () => {
-    if (!query.trim()) return;
+    if (!query.trim() || loading) return;
 
-    setLoading(true);
     setError(null);
-
-    try {
-      const res = await fetch("https://healthllm-project-myapp.onrender.com/search", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ query }),
-      });
-
-      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-
-      const data = await res.json();
-      onQuery({ question: query, answer: data.answer, timestamp: new Date().toISOString() });
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-      setQuery("");
-    }
+    await onQuery(query);
+    setQuery(""); // Clear textarea after submission
   };
 
   const containerClass = `query-container ${isDarkMode ? 'dark-mode' : ''}`;
@@ -62,9 +42,6 @@ function QueryInput({ isDarkMode, onQuery }) {
               {loading ? "Processing..." : "Search"}
             </button>
           </div>
-          {/* <button className="mic-button" onClick={() => {}}> */}
-            {/* <span role="img" aria-label="mic"></span> */}
-          {/* </button> */}
         </div>
         {error && <p className="query-error">❌ {error}</p>}
       </div>
