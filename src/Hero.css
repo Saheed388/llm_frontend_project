@@ -129,16 +129,22 @@
   }
 }
 
+
+
+/* logo logo logo */
+
 @media (max-width: 480px) {
   /* Logo & Branding */
   .logo {
+    max-width: 100%;
     justify-content: center;  /* keep centered */
     margin-bottom: 0.5rem;
+    padding-top: 10px;
   }
 
   .logo-img {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
   }
 
   .logo-text {
