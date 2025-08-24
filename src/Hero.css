@@ -111,7 +111,7 @@
     width: 100%;
     max-width: 100%;
     height: auto;
-    padding: clamp(0.75rem, 3vw, 1rem);
+    /* padding: clamp(0.75rem, 3vw, 1rem); */
     box-shadow: none;
   }
 

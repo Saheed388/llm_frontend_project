@@ -6,7 +6,7 @@ function Footer({ isDarkMode }) {
   return (
     <footer className="footer">
       <p className="footer-write">
-        HealthREG AI | Built By Jimoh Saheed Tunde{' '}  
+        Built By Jimoh Saheed Tunde{' '}  
         {' '}<a href="https://github.com/Saheed388" target="_blank" rel="noopener noreferrer">
           <FaGithub /> GitHub
         </a>{' '}

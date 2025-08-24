@@ -35,14 +35,15 @@ body {
 
 
 
-/* Footer */
-.footer {
+/* Footer */ 
+ .footer {
   background-color: #006600;
   padding: clamp(0.75rem, 2vw, 1rem);
   text-align: center;
   color: #F5F5F5;
-  position: relative;
-  transform: translateX(20px);
+  margin-top: 80px
+  /* position: relative;
+  transform: translateX(20px); */
 
 }
 
@@ -82,10 +83,10 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .footer {
-    max-width: 100%; /* Full width on mobile */
-    padding: clamp(0.5rem, 2vw, 0.75rem); /* Reduced padding */
+    /* max-width: 100%;  */
+    /* padding: clamp(0.5rem, 2vw, 0.75rem); Reduced padding */
   }
 
   .footer-write {
