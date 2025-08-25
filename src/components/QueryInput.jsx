@@ -9,10 +9,13 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
     if (!query.trim() || loading) return;
 
     setError(null);
+    try{
     await onQuery(query);
     setQuery(""); // Clear textarea after submission
-  };
-
+  }catch(err){
+    setError(err.message || "💡 Hmm, the request timed out. Don’t worry, just try again and we’ll get it sorted 👍")
+  }
+  }
   const containerClass = `query-container ${isDarkMode ? 'dark-mode' : ''}`;
 
   return (
@@ -21,11 +24,12 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
         <span className="query-title"></span>
       </div>
       <div className="query-box">
+        <p Search hospital details near you in Abuja and Lagos/>
         <div className="query-input-wrapper">
           <textarea
             id="query-input"
             className="query-input"
-            placeholder="Search hospital details near you"
+            placeholder="Find hospital details in Abuja & Lagos"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && !loading && handleQuerySubmit()}

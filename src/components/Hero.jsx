@@ -29,11 +29,13 @@ function Hero({ isDarkMode, onQuery }) {
       >
         <Logo />
         <div className="description">
+          <div className="line-color"></div>
           <p className="hero-subtitle">
             Empowering Nigerian healthcare with AI insights from 
             <span> health.gov.ng</span> to help you choose the right facility with confidence.
           </p>
         </div>
+        <div className="line-color"></div>
 
         <h3 className="faq-title">Frequently Asked Questions</h3>
         <ul className="faq-list">
