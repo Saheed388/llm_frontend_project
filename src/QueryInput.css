@@ -3,7 +3,7 @@
   border-radius: 10px;
   padding: 15px;
   position: absolute;
-  right: 280px;
+  right: 330px;
 
 
 }
@@ -32,7 +32,16 @@
   padding: 15px;
   border-radius: 8px;
   position: absolute;
-  right: -70px
+  right: -70px;
+}
+
+.query-box p {
+  color: #006400; /* Dark green text */
+  display: flex; /* Flex container for child elements */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  font-family: "Macondo";
+  font-size: 25px;
 }
 
 .query-input-wrapper {
@@ -94,6 +103,7 @@
     width: 250px;
     padding: 12px;
     height: 5px;
+    margin-bottom: 100px
   }
 
   .query-box {
@@ -104,11 +114,20 @@
     border-radius: 25px;
     width: 100%;
   }
+  .query-box p {
+  color: #006400; /* Dark green text */
+  display: flex; /* Flex container for child elements */
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+  font-family: "Macondo";
+  font-size: 25px;
+  text-align: center;
+}
 
   .query-input {
     width: 100%;        /* full width */
     max-width: 100%;
-    height: auto;
+    height: 30px;
     min-height: 40px;   /* give more tap space */
     font-size: 14px;
     border-radius: 55px;
