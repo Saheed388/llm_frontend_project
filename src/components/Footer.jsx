@@ -22,7 +22,7 @@ function Footer({ isDarkMode }) {
         Copyright &copy; 2025 
         <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">
           
-        </a>.
+        </a>
       </p>
     </footer>
   );
