@@ -202,7 +202,9 @@
     background: #F5F5F5; 
     /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
     position: relative;
-    right: 270px;                /* don’t push it off the screen */
+    right: 270px;             
+    margin-top: 3px
+
   }
   .results-list {
     flex-direction: column;
