@@ -136,49 +136,66 @@
 }
 
 /* Mobile-friendly Results Section (up to 768px) */
+/* Smaller Mobile Screens (up to 480px) */
 @media (max-width: 768px) {
   .results-container {
-    max-width: 95%;
-    margin: 1rem auto;
-    padding: 1rem;
+    max-width: 1300px;
+    width: 700px;
+    margin: 60px auto 0;     /* center horizontally with top spacing */
+    padding: 0.75rem;
+    /* border: 1px solid #ccc;  */
     border-radius: 8px;
-    position: relative; /* Avoid absolute positioning */
-  }
+    background: #F5F5F5; 
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
+    position: relative;
+    right: 240px;             
+    margin-top: 3px
 
+  }
   .results-list {
     flex-direction: column;
     max-width: 100%;
-    padding: 0 0.5rem;
+    /* width: 70px; */
+    padding: 0;
     gap: 1rem;
     justify-content: flex-start;
   }
 
   .result-item {
-    width: 100%;
-    padding: 0.75rem 1rem;
+    /* width: 100%; */
+    padding: 0.75rem;
+    /* border: 1px solid #e0e0e0; Light gray border */
     border-radius: 6px;
-    flex: 1 1 auto;
+    background: #F5F5F5; /* Light gray background */
   }
 
   .results-question {
     font-size: 0.9rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: 16px;
+    font-weight: bold;
+    color: #333; /* Dark gray text */
+    background: #d3d3d3; /* Gray background like in the image */
+    padding: 0.5rem;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
   }
 
   .results-text {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #444; /* Darker text for readability */
   }
 
   .results-timestamp {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    color: #006400; /* Green color matching the image */
     margin-top: 0.3rem;
+    font-style: italic;
   }
 
   .results-placeholder {
-    font-size: 0.85rem;
-    padding: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.4rem;
+    color: #666; /* Gray placeholder text */
   }
 
   /* Touch interaction for mobile */
