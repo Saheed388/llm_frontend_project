@@ -8,7 +8,7 @@
   box-shadow: 0 4px 12px rgba(176, 212, 188, 0.08);
   box-sizing: border-box;
   transition: transform 0.3s ease;
-  margin-top: 150px
+  margin-top: 50px
 }
 
 .results-container:hover {
@@ -134,7 +134,7 @@
 
 @media (min-width: 1025px) {
   .results-container {
-  max-width: 90%;
+  max-width: 100%;
   width: 100%;
   margin: 1rem auto;
   padding: 1.5rem;
@@ -143,7 +143,7 @@
   box-shadow: 0 4px 12px rgba(176, 212, 188, 0.08);
   box-sizing: border-box;
   transition: transform 0.3s ease;
-  margin-top: 50px
+  margin-top: 1px
 }
 }
 
