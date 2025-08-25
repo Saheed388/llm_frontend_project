@@ -94,9 +94,20 @@
   margin-top: 5px;
 }
 
+/* Desktop version */
 
+@media (min-width: 1025px) {
+  .query-container {
+    position: relative;   /* remove absolute to allow natural flow */
+    right: -170px;
+    margin: 10px auto;
+    width: 350px;
+    padding: 12px;
+    height: 5px;
+    margin-bottom: 100px
+  }
 
-
+}
 /* 📱 Mobile-friendly QueryInput */
 @media (max-width: 768px) {
   .query-container {

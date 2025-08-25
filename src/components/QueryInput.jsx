@@ -13,11 +13,10 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
       await onQuery(query);
       setQuery(''); // Clear textarea after successful submission
     } catch (err) {
-      setError(err.message || '💡 Hmm, the request timed out. Don’t worry, just try again and we’ll get it sorted 👍');
+      setError('💡 Hmm, the request timed out. Don’t worry, just try again and we’ll get it sorted 👍');
     }
   };
 
-  // Prevent Enter key from adding newline in textarea, only submit
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey && !loading) {
       e.preventDefault(); // Prevent default Enter behavior (newline)
@@ -33,7 +32,6 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
         <span className="query-title"></span> {/* Consider adding content or removing if unused */}
       </div>
       <div className="query-box">
-        {/* Fixed invalid self-closing p tag and unclear instruction */}
         <div className="query-input-wrapper">
           <textarea
             id="query-input"
@@ -41,15 +39,15 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
             placeholder="Find hospital details in Abuja & Lagos"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onKeyPress={handleKeyPress} // Use dedicated handler for keypress
+            onKeyPress={handleKeyPress}
             disabled={loading}
-            rows={4} // Added for better UX, adjust as needed
+            rows={4}
           />
         </div>
         <div className="query-actions">
           <button
             className="query-button"
-            onClick={handleQuerySubmit} // Simplified, no need for inline condition
+            onClick={handleQuerySubmit}
             disabled={loading}
           >
             {loading ? 'Processing...' : 'Search'}

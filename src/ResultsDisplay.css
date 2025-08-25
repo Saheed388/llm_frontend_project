@@ -29,7 +29,7 @@
 
 .result-item {
   padding: 1rem 1.25rem;
-  border: 1px solid #ddd;
+  border: 1px solid #F5F5F5;
   border-radius: 10px;
   background-color: #F5F5F5;
   transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -110,7 +110,7 @@
 }
 
 .dark-mode .result-item:hover {
-  background-color: #333;
+  background-color: #F5F5F5;
 }
 
 .dark-mode .results-question {
@@ -134,6 +134,22 @@
   background-color: #444;
   color: #bbb;
 }
+
+@media (min-width: 1025px) {
+  .results-container {
+  max-width: 80%;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(176, 212, 188, 0.08);
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  margin-top: 50px
+}
+}
+
 
 /* Mobile-friendly Results Section (up to 768px) */
 /* Smaller Mobile Screens (up to 480px) */
