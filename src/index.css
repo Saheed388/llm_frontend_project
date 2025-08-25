@@ -85,8 +85,8 @@ body {
 
 @media (max-width: 480px) {
   .footer {
-    /* max-width: 100%;  */
-    /* padding: clamp(0.5rem, 2vw, 0.75rem); Reduced padding */
+     margin-top: 80px
+
   }
 
   .footer-write {
