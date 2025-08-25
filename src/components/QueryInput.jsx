@@ -34,7 +34,6 @@ function QueryInput({ isDarkMode, onQuery, loading }) {
       </div>
       <div className="query-box">
         {/* Fixed invalid self-closing p tag and unclear instruction */}
-        <p>Search hospital details near you in Abuja and Lagos</p>
         <div className="query-input-wrapper">
           <textarea
             id="query-input"
