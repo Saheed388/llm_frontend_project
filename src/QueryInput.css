@@ -101,9 +101,9 @@
 @media (max-width: 768px) {
   .query-container {
     position: relative;   /* remove absolute to allow natural flow */
-    right: 30px;
+    right: -55px;
     margin: 10px auto;
-    width: 550px;
+    width: 350px;
     padding: 12px;
     height: 5px;
     margin-bottom: 100px

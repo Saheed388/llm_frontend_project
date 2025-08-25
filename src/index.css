@@ -92,7 +92,7 @@ body {
   }
 
   .footer-write {
-    transform: translateX(0); /* Ensure no shift */
+    transform: translateX(3); /* Ensure no shift */
     width: 100%; /* Full width on mobile */
   }
 
