@@ -9,10 +9,10 @@ function Hero({ isDarkMode, onQuery }) {
   }, []);
 
   const chats = [
-    "How large is Mamagi Primary Health Clinic in terms of staff and beds?",
-    "Does Accolade Medical Clinic have laboratory scientists or technicians?",
+    "I’m sick and I just relocated to Gwarimpa, Abuja. Which hospital is close to me?",
+    "Is there a dentist at Gwarimpa General Hospital, and how many dentists do they have?",
     "What services are provided at Defense Headquarters Medical Centre Abuja?",
-    "Does Lafiak Hospital Abaji have a dentist or dental technician?",
+    "I’m new in Egbeda and need a medical checkup. Can you list the hospitals in Egbeda, Lagos?",
     "What is the summary of Agyana Health Clinic in Pandagi Agyana, Abaji, Fct?",
   ];
 
