@@ -109,71 +109,18 @@
     font-size: clamp(0.7rem, 1.8vw, 0.85rem);
   }
 }
-@media (max-width: 768px) {
-  /* Logo & Branding */
-  .logo {
-    max-width: 100%;
-    justify-content: center;  /* keep centered */
-    margin-bottom: 0.5rem;
-    padding-top: 10px;
-  }
 
-  .logo-img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .logo-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-
-  /* Description text */
-  .hero-subtitle {
-    font-size: 25px;
-    line-height: 1.4;
-    padding: 0 12px;  /* add side padding */
-    text-align: center;
-    color: #f5f5f5;
-  }
-
-  /* FAQ Section */
-  .faq-title {
-    font-size: 1rem;
-    margin: 1rem 0 0.5rem 0;
-    text-align: center;
-    color: #ffd700;
-  }
-
-  .faq-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    width: 70%; /* reduce width so it’s not edge-to-edge */
-  }
-
-  .faq-item {
-    background: rgba(255, 255, 255, 0.1); /* subtle contrast */
-    border-radius: 8px;
-    padding: 10px;
-    margin: 6px 0;
-    font-size: 0.9rem;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
-    text-align: left;
-  }
-
-  .faq-item:hover {
-    background: rgba(255, 215, 0, 0.2);
-    color: #ffd700;
-  }
-}
-
-/* logo logo logo */
+/* Tab */
 
 @media (max-width: 480px) {
-  /* Logo & Branding */
+
+  .hero {
+    position: relative;  /* don’t fix it on small screens */
+    width: 100%;        /* full width on mobile */
+    max-width: 100%;
+    height: auto;       /* let it grow naturally */
+    box-shadow: none;   /* optional: remove sidebar shadow */
+  }
   .logo {
     max-width: 100%;
     justify-content: center;  /* keep centered */
